@@ -1,0 +1,12 @@
+{
+  "feature_dir": "/Users/mszala/workspace/test-spec-kit-repository/test-spec-kit-repository/specs/001-public-api-proxy",
+  "feature_name": "001-public-api-proxy",
+  "spec_path": "/Users/mszala/workspace/test-spec-kit-repository/test-spec-kit-repository/specs/001-public-api-proxy/spec.md",
+  "base_branch": "main",
+  "feature_branch": "001-public-api-proxy",
+  "started_at": "2026-03-25T00:00:00Z",
+  "updated_at": "2026-03-25T00:00:00Z",
+  "groups": [],
+  "current_group": 1,
+  "total_groups": 6
+}

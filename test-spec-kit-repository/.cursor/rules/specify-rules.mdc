@@ -1,0 +1,38 @@
+---
+description: Project Development Guidelines
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# test-spec-kit-repository Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2026-03-25
+
+## Active Technologies
+- Python 3.11+ + FastAPI ≥ 0.110.0, uvicorn[standard] ≥ 0.29.0, httpx ≥ 0.27.0, pydantic v2 (bundled with FastAPI) (001-public-api-proxy)
+- N/A — no database, no persistent storage (001-public-api-proxy)
+
+- (001-public-api-proxy)
+
+## Project Structure
+
+```text
+src/
+tests/
+```
+
+## Commands
+
+# Add commands for 
+
+## Code Style
+
+: Follow standard conventions
+
+## Recent Changes
+- 001-public-api-proxy: Added Python 3.11+ + FastAPI ≥ 0.110.0, uvicorn[standard] ≥ 0.29.0, httpx ≥ 0.27.0, pydantic v2 (bundled with FastAPI)
+
+- 001-public-api-proxy: Added
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->
