@@ -63,11 +63,11 @@ Tests MUST be written and confirmed failing before implementation code for each 
 
 > **Write these tests before implementing the service or router. Confirm they fail. Then implement.**
 
-- [ ] T010 [P] [US1] Write integration test `tests/integration/test_ip.py`:
+- [x] T010 [P] [US1] Write integration test `tests/integration/test_ip.py`:
   - `test_get_ip_happy_path`: mock `X-Forwarded-For` header → assert HTTP 200, body `{"ip": "1.2.3.4"}`
   - `test_get_ip_falls_back_to_x_real_ip`: no X-Forwarded-For, set X-Real-IP → assert correct IP returned
   - `test_get_ip_upstream_failure`: no headers, no client host → assert HTTP 502, body has `"detail"` key
-- [ ] T011 [P] [US1] Write unit test `tests/unit/test_ip_service.py`:
+- [x] T011 [P] [US1] Write unit test `tests/unit/test_ip_service.py`:
   - `test_extract_ip_from_x_forwarded_for`: first IP in comma-separated list is returned
   - `test_extract_ip_prefers_x_forwarded_for_over_x_real_ip`
   - `test_extract_ip_falls_back_to_client_host`
@@ -75,13 +75,13 @@ Tests MUST be written and confirmed failing before implementation code for each 
 
 ### Implementation for User Story 1
 
-- [ ] T012 [US1] Implement `src/services/ip_service.py` — function `extract_caller_ip(request: Request) -> str`:
+- [x] T012 [US1] Implement `src/services/ip_service.py` — function `extract_caller_ip(request: Request) -> str`:
   - Check `X-Forwarded-For` (first IP in comma list), then `X-Real-IP`, then `request.client.host`
   - Raise `UpstreamError("Could not determine caller IP address")` if all sources absent/empty
-- [ ] T013 [US1] Implement `src/routers/ip.py` — `GET /ip` router:
+- [x] T013 [US1] Implement `src/routers/ip.py` — `GET /ip` router:
   - Call `ip_service.extract_caller_ip(request)`; return `IpResponse(ip=ip)` with HTTP 200
   - Register router in `src/main.py` with prefix `""`
-- [ ] T014 [US1] Run tests: `pytest tests/integration/test_ip.py tests/unit/test_ip_service.py -v` — all must pass
+- [x] T014 [US1] Run tests: `pytest tests/integration/test_ip.py tests/unit/test_ip_service.py -v` — all must pass
 
 **Checkpoint**: `GET /ip` is fully functional and independently testable. User Story 1 complete.
 

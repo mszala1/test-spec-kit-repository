@@ -39,9 +39,12 @@ async def invalid_date_handler(request: Request, exc: InvalidDateError) -> JSONR
     return JSONResponse(status_code=422, content={"detail": exc.message})
 
 
-# Routers are registered as each phase is implemented:
+from src.routers import ip  # noqa: E402
+
+app.include_router(ip.router)
+
+# Remaining routers registered as each phase is implemented:
 # - health router (Phase 6)
-# - ip router (Phase 3)
 # - weather router (Phase 4)
 # - rates router (Phase 5)
 
