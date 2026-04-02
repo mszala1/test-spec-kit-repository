@@ -5,8 +5,19 @@
   "base_branch": "main",
   "feature_branch": "001-public-api-proxy",
   "started_at": "2026-03-25T00:00:00Z",
-  "updated_at": "2026-03-25T00:00:00Z",
-  "groups": [],
-  "current_group": 1,
+  "updated_at": "2026-03-25T00:01:00Z",
+  "groups": [
+    {
+      "group_number": 1,
+      "phases": [1, 2],
+      "title": "Setup + Foundational",
+      "branch": "001-public-api-proxy/phase-1-2-setup-foundation",
+      "base_branch": "main",
+      "pr_url": "pending-push",
+      "status": "open",
+      "completed_at": "2026-03-25T00:01:00Z"
+    }
+  ],
+  "current_group": 2,
   "total_groups": 6
 }
