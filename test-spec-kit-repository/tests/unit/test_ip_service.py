@@ -1,11 +1,16 @@
-import pytest
 from unittest.mock import MagicMock
+
+import pytest
 
 from src.services.exceptions import UpstreamError
 from src.services.ip_service import extract_caller_ip
 
 
-def _make_request(xff: str | None = None, x_real_ip: str | None = None, client_host: str | None = "127.0.0.1") -> MagicMock:
+def _make_request(
+    xff: str | None = None,
+    x_real_ip: str | None = None,
+    client_host: str | None = "127.0.0.1",
+) -> MagicMock:
     request = MagicMock()
     headers = {}
     if xff is not None:

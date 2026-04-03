@@ -28,9 +28,7 @@ async def upstream_error_handler(request: Request, exc: UpstreamError) -> JSONRe
 
 
 @app.exception_handler(LocationNotFoundError)
-async def location_not_found_handler(
-    request: Request, exc: LocationNotFoundError
-) -> JSONResponse:
+async def location_not_found_handler(request: Request, exc: LocationNotFoundError) -> JSONResponse:
     return JSONResponse(status_code=422, content={"detail": exc.message})
 
 
